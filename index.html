@@ -1,0 +1,663 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Fortune 500 Brand Rank (WIP)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+    <style type="text/css">
+      .main.container {
+        margin-top: 2em;
+      }
+      .list {
+        height: 450px;
+        overflow-y: scroll;
+      }
+      .same {
+        color: blue;
+      }
+      .up {
+        color: green;
+      }
+      .down {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class="ui doubling stackable grid main container">
+    <div class="row">
+      <div class="eight wide centered column">
+        <h1 class="ui center aligned icon header">
+          <i class="circular sort numeric ascending icon"></i>
+          <div class="content">
+            Brank Rank (WIP)
+            <div class="sub header">Quantent's proprietary brand benchmarking algorith, applied to Fortune 500 companies</div>
+          </div>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="eight wide column">
+        <div class="ui huge ordered selection horizontal list">
+          <div class="item" onclick="render(1);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(10).gif">
+            <div class="content">
+              <a class="header">Apple</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="same">&rarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(2);">
+            <img class="ui avatar image" src="http://www.turnerduckworth.com/media/filer_public/86/18/86187bcc-752a-46f4-94d8-0ce54b98cd46/td-amazon-smile-logo-01-large.jpg">
+            <div class="content">
+              <a class="header">Amazon</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="same">&rarr;</span> Love <span class="down">&darr;</span> Mentions <span class="same">&rarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(3);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(45).gif">
+            <div class="content">
+              <a class="header">Ford Motor</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="same">&rarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(4);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(20).gif">
+            <div class="content">
+              <a class="header">CVS Health</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="same">&rarr;</span> Love <span class="down">&darr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(5);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(49).gif">
+            <div class="content">
+              <a class="header">General Motors</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="down">&darr;</span> Love <span class="down">&darr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(6);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(17).gif">
+            <div class="content">
+              <a class="header">Boeing</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="up">&uarr;</span> Love <span class="up">&uarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(7);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(57).gif">
+            <div class="content">
+              <a class="header">Home Depot</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="down">&darr;</span> Love <span class="down">&darr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(8);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(48).gif">
+            <div class="content">
+              <a class="header">General Electric</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(9);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(15).gif">
+            <div class="content">
+              <a class="header">Berkshire Hathaway</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="down">&darr;</span> Love <span class="down">&darr;</span> Mentions <span class="same">&rarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(10);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(30).gif">
+            <div class="content">
+              <a class="header">Costco</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="same">&rarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(11);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(8).gif">
+            <div class="content">
+              <a class="header">AmerisourceBergen</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="same">&rarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(12);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(41).gif">
+            <div class="content">
+              <a class="header">Express Scripts Hodings</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="same">&rarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(13);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos2/thumb(5).gif">
+            <div class="content">
+              <a class="header">Kroger</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="same">&rarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(14);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos2/thumb(17).gif">
+            <div class="content">
+              <a class="header">McKesson</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="same">&rarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(15);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos2/thumb(61).gif">
+            <div class="content">
+              <a class="header">UnitedHealth Group</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item active" onclick="render(16);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos3/thumb(3).gif">
+            <div class="content">
+              <a class="header">Walmart</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(17);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(19).gif">
+            <div class="content">
+              <a class="header">Cardinal Health</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(18);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos2/thumb(1).gif">
+            <div class="content">
+              <a class="header">J.P. Morgan Chase</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(19);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos3/thumb.gif">
+            <div class="content">
+              <a class="header">Verizon</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(20);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos3/thumb(2).gif">
+            <div class="content">Walgreens</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(21);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(12).gif">
+            <div class="content">
+              <a class="header">AT&amp;T</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(22);">
+            <img class="ui avatar image" src="https://media.glassdoor.com/sqll/247/fannie-mae-squarelogo-1462205683111.png">
+            <div class="content">
+              <a class="header">Fannie Mae</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(23);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(22).gif">
+            <div class="content">
+              <a class="header">Chevron</a>
+              <div class="description">Social <span class="down">&darr;</span> Search <span class="up">&uarr;</span> Love <span class="down">&darr;</span> Mentions <span class="same">&rarr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(24);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos3/thumb(6).gif">
+            <div class="content">
+              <a class="header">Wells Fargo</a>
+              <div class="description">Social <span class="same">&rarr;</span> Search <span class="up">&uarr;</span> Love <span class="same">&rarr;</span> Mentions <span class="down">&darr;</span></div>
+            </div>
+          </div>
+
+          <div class="item" onclick="render(25);">
+            <img class="ui avatar image" src="http://www.expectad.com/tlogos/thumb(42).gif">
+            <div class="content">
+              <a class="header">Exxon Mobil</a>
+              <div class="description">Social <span class="up">&uarr;</span> Search <span class="down">&darr;</span> Love <span class="same">&rarr;</span> Mentions <span class="up">&uarr;</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="eight wide column">
+        <div class="radarChart"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdn.rawgit.com/nbremer/21746a9668ffdf6d8242/raw/980dda56c87a6813fc4ba527ec7db0b53e83dbb5/radarChart.js"></script>
+  <script>
+    $('.item').click(function(){
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    var margin = {top: 100, right: 100, bottom: 100, left: 100},
+        width = Math.min(450, window.innerWidth - 10) - margin.left - margin.right,
+        height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+    var color = d3.scale.ordinal().range(["#414344","#F9A01B"]);
+
+    var radarChartOptions = {
+      w: width,
+      h: height,
+      margin: margin,
+      maxValue: 1,
+      levels: 5,
+      roundStrokes: true,
+      color: color
+    };
+
+    function retrieve(i){
+      data = [];
+      switch(i) {
+        case 1:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.9},
+            {axis:"SEARCH",value:0.2},
+            {axis:"LOVE",value:0.93},
+            {axis:"MENTIONS",value:0.92}
+            ],[
+            {axis:"SOCIAL",value:0.91},
+            {axis:"SEARCH",value:0.1},
+            {axis:"LOVE",value:0.95},
+            {axis:"MENTIONS",value:0.95}
+            ]
+          ];
+          break;
+        case 2:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.55},
+            {axis:"SEARCH",value:0.95},
+            {axis:"LOVE",value:0.80},
+            {axis:"MENTIONS",value:0.77}
+            ],[
+            {axis:"SOCIAL",value:0.60},
+            {axis:"SEARCH",value:0.95},
+            {axis:"LOVE",value:0.76},
+            {axis:"MENTIONS",value:0.80}
+            ]
+          ];
+          break;
+        case 3:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.55},
+            {axis:"SEARCH",value:0.60},
+            {axis:"LOVE",value:0.60},
+            {axis:"MENTIONS",value:0.62}
+            ],[
+            {axis:"SOCIAL",value:0.50},
+            {axis:"SEARCH",value:0.65},
+            {axis:"LOVE",value:0.61},
+            {axis:"MENTIONS",value:0.63}
+            ]
+          ];
+          break;
+        case 4:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.52},
+            {axis:"SEARCH",value:0.59},
+            {axis:"LOVE",value:0.59},
+            {axis:"MENTIONS",value:0.52}
+            ],[
+            {axis:"SOCIAL",value:0.47},
+            {axis:"SEARCH",value:0.57},
+            {axis:"LOVE",value:0.54},
+            {axis:"MENTIONS",value:0.60}
+            ]
+          ];
+          break;
+        case 5:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.47},
+            {axis:"SEARCH",value:0.55},
+            {axis:"LOVE",value:0.55},
+            {axis:"MENTIONS",value:0.50}
+            ],[
+            {axis:"SOCIAL",value:0.52},
+            {axis:"SEARCH",value:0.50},
+            {axis:"LOVE",value:0.50},
+            {axis:"MENTIONS",value:0.55}
+            ]
+          ];
+          break;
+        case 6:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.2},
+            {axis:"SEARCH",value:0.40},
+            {axis:"LOVE",value:0.55},
+            {axis:"MENTIONS",value:0.50}
+            ],[
+            {axis:"SOCIAL",value:0.21},
+            {axis:"SEARCH",value:0.45},
+            {axis:"LOVE",value:0.60},
+            {axis:"MENTIONS",value:0.45}
+            ]
+          ];
+          break;
+        case 7:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.40},
+            {axis:"SEARCH",value:0.42},
+            {axis:"LOVE",value:0.35},
+            {axis:"MENTIONS",value:0.40}
+            ],[
+            {axis:"SOCIAL",value:0.45},
+            {axis:"SEARCH",value:0.37},
+            {axis:"LOVE",value:0.20},
+            {axis:"MENTIONS",value:0.35}
+            ]
+          ];
+          break;
+        case 8:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.39},
+            {axis:"SEARCH",value:0.37},
+            {axis:"LOVE",value:0.33},
+            {axis:"MENTIONS",value:0.30}
+            ],[
+            {axis:"SOCIAL",value:0.38},
+            {axis:"SEARCH",value:0.30},
+            {axis:"LOVE",value:0.35},
+            {axis:"MENTIONS",value:0.35}
+            ]
+          ];
+          break;
+        case 9:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.05},
+            {axis:"SEARCH",value:0.35},
+            {axis:"LOVE",value:0.35},
+            {axis:"MENTIONS",value:0.55}
+            ],[
+            {axis:"SOCIAL",value:0.10},
+            {axis:"SEARCH",value:0.30},
+            {axis:"LOVE",value:0.29},
+            {axis:"MENTIONS",value:0.55}
+            ]
+          ];
+          break;
+        case 10:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.29},
+            {axis:"SEARCH",value:0.32},
+            {axis:"LOVE",value:0.29},
+            {axis:"MENTIONS",value:0.30}
+            ],[
+            {axis:"SOCIAL",value:0.28},
+            {axis:"SEARCH",value:0.32},
+            {axis:"LOVE",value:0.29},
+            {axis:"MENTIONS",value:0.19}
+            ]
+          ];
+          break;
+        case 11:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.28},
+            {axis:"SEARCH",value:0.31},
+            {axis:"LOVE",value:0.28},
+            {axis:"MENTIONS",value:0.29}
+            ],[
+            {axis:"SOCIAL",value:0.27},
+            {axis:"SEARCH",value:0.31},
+            {axis:"LOVE",value:0.28},
+            {axis:"MENTIONS",value:0.18}
+            ]
+          ];
+          break;
+        case 12:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.26},
+            {axis:"SEARCH",value:0.30},
+            {axis:"LOVE",value:0.27},
+            {axis:"MENTIONS",value:0.19}
+            ],[
+            {axis:"SOCIAL",value:0.27},
+            {axis:"SEARCH",value:0.30},
+            {axis:"LOVE",value:0.27},
+            {axis:"MENTIONS",value:0.28}
+            ]
+          ];
+          break;
+        case 13:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.26},
+            {axis:"SEARCH",value:0.29},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.27}
+            ],[
+            {axis:"SOCIAL",value:0.25},
+            {axis:"SEARCH",value:0.29},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.18}
+            ]
+          ];
+          break;
+        case 14:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.26},
+            {axis:"SEARCH",value:0.04},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.27}
+            ],[
+            {axis:"SOCIAL",value:0.25},
+            {axis:"SEARCH",value:0.05},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.18}
+            ]
+          ];
+          break;
+        case 15:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.20},
+            {axis:"SEARCH",value:0.20},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.20}
+            ],[
+            {axis:"SOCIAL",value:0.20},
+            {axis:"SEARCH",value:0.15},
+            {axis:"LOVE",value:0.26},
+            {axis:"MENTIONS",value:0.18}
+            ]
+          ];
+          break;
+        case 16:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.02},
+            {axis:"SEARCH",value:0.50},
+            {axis:"LOVE",value:0.04},
+            {axis:"MENTIONS",value:0.45}
+            ],[
+            {axis:"SOCIAL",value:0.05},
+            {axis:"SEARCH",value:0.55},
+            {axis:"LOVE",value:0.04},
+            {axis:"MENTIONS",value:0.55}
+            ]
+          ];
+          break;
+        case 17:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.19},
+            {axis:"SEARCH",value:0.15},
+            {axis:"LOVE",value:0.24},
+            {axis:"MENTIONS",value:0.18}
+            ],[
+            {axis:"SOCIAL",value:0.19},
+            {axis:"SEARCH",value:0.20},
+            {axis:"LOVE",value:0.24},
+            {axis:"MENTIONS",value:0.20}
+            ]
+          ];
+          break;
+        case 18:
+          data = [
+            [
+              {axis:"SOCIAL",value:0.02},
+              {axis:"SEARCH",value:0.45},
+              {axis:"LOVE",value:0.04},
+              {axis:"MENTIONS",value:0.50}
+              ],[
+              {axis:"SOCIAL",value:0.05},
+              {axis:"SEARCH",value:0.50},
+              {axis:"LOVE",value:0.04},
+              {axis:"MENTIONS",value:0.40}
+            ]
+          ];
+          break;
+        case 19:
+          data = [
+            [
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.47},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.50}
+              ],[
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.43},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.40}
+            ]
+          ];
+          break;
+        case 20:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.12},
+            {axis:"SEARCH",value:0.15},
+            {axis:"LOVE",value:0.15},
+            {axis:"MENTIONS",value:0.18}
+            ],[
+            {axis:"SOCIAL",value:0.14},
+            {axis:"SEARCH",value:0.20},
+            {axis:"LOVE",value:0.16},
+            {axis:"MENTIONS",value:0.15}
+            ]
+          ];
+          break;
+        case 21:
+          data = [
+            [
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.40},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.39}
+              ],[
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.45},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.25}
+            ]
+          ];
+          break;
+        case 22:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.10},
+            {axis:"SEARCH",value:0.15},
+            {axis:"LOVE",value:0.12},
+            {axis:"MENTIONS",value:0.15}
+            ],[
+            {axis:"SOCIAL",value:0.12},
+            {axis:"SEARCH",value:0.10},
+            {axis:"LOVE",value:0.13},
+            {axis:"MENTIONS",value:0.12}
+            ]
+          ];
+          break;
+        case 23:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.10},
+            {axis:"SEARCH",value:0.08},
+            {axis:"LOVE",value:0.13},
+            {axis:"MENTIONS",value:0.10}
+            ],[
+            {axis:"SOCIAL",value:0.08},
+            {axis:"SEARCH",value:0.13},
+            {axis:"LOVE",value:0.11},
+            {axis:"MENTIONS",value:0.08}
+            ]
+          ];
+          break;
+        case 24:
+          data = [
+            [
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.20},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.29}
+              ],[
+              {axis:"SOCIAL",value:0.01},
+              {axis:"SEARCH",value:0.25},
+              {axis:"LOVE",value:0.08},
+              {axis:"MENTIONS",value:0.15}
+            ]
+          ];
+          break;
+        case 25:
+          data = [
+            [
+            {axis:"SOCIAL",value:0.05},
+            {axis:"SEARCH",value:0.08},
+            {axis:"LOVE",value:0.03},
+            {axis:"MENTIONS",value:0.05}
+            ],[
+            {axis:"SOCIAL",value:0.08},
+            {axis:"SEARCH",value:0.04},
+            {axis:"LOVE",value:0.03},
+            {axis:"MENTIONS",value:0.08}
+            ]
+          ];
+          break;
+      }
+      return data
+    }
+
+    function render(i){
+      RadarChart(".radarChart", retrieve(i), radarChartOptions);
+    }
+
+    render(1);
+  </script>
+  </body>
+</html>
